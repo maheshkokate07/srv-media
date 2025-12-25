@@ -279,12 +279,17 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  min-width: 2.2rem;
+  min-height: 2.2rem;
   background: var(--color-primary);
   color: var(--color-white);
   border-radius: var(--radius-full);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
 }
 
 /* ==========================================================================
@@ -792,8 +797,10 @@ ol {
 
 .enquiry-form__submit {
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
   margin-top: var(--space-md);
+  gap: 0.5rem;
 }
 
 /* ==========================================================================
