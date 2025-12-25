@@ -358,7 +358,7 @@ ol {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     gap: var(--space-xl);
-    padding: 0;
+    /* padding: 0; */
   }
 }
 
@@ -1173,10 +1173,10 @@ ol {
   .schedule__content {
     padding: var(--space-3xl) var(--space-4xl) var(--space-3xl) var(--space-4xl);
     border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+    width: 100%;
+    background: linear-gradient(135deg, hsla(270, 50%, 95%, 1) 0%, hsla(270, 50%, 90%, 1) 100%);
+    border-radius: var(--radius-lg);
   }
-  width: 100%;
-  background: linear-gradient(135deg, hsla(270, 50%, 95%, 1) 0%, hsla(270, 50%, 90%, 1) 100%);
-  border-radius: var(--radius-lg);
 }
 
 @media (min-width: 768px) {
