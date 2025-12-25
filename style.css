@@ -1,5 +1,5 @@
-/* Stronger specificity for Pre-schedule Section */
-.schedule.schedule-section, .schedule-section .schedule__container {
+.schedule.schedule-section,
+.schedule-section .schedule__container {
   display: flex !important;
   flex-direction: row !important;
   width: 100% !important;
@@ -7,6 +7,7 @@
   max-height: unset !important;
   overflow: hidden !important;
 }
+
 .schedule-section .schedule__content {
   flex: 1 1 50% !important;
   padding: var(--space-3xl) var(--space-4xl) var(--space-3xl) var(--space-4xl) !important;
@@ -18,6 +19,7 @@
   box-sizing: border-box !important;
   border-radius: 0 !important;
 }
+
 .schedule-section .schedule__image {
   flex: 1 1 50% !important;
   display: flex !important;
@@ -28,6 +30,7 @@
   border-radius: 0 !important;
   min-height: 220px !important;
 }
+
 .schedule-section .schedule__image img {
   width: 100% !important;
   height: 100% !important;
@@ -37,53 +40,59 @@
   display: block !important;
   margin: 0 !important;
 }
+
 @media (max-width: 900px) {
-  .schedule-section .schedule, .schedule-section .schedule__container {
+
+  .schedule-section .schedule,
+  .schedule-section .schedule__container {
     flex-direction: column !important;
     min-height: unset !important;
   }
-  .schedule-section .schedule__content, .schedule-section .schedule__image {
+
+  .schedule-section .schedule__content,
+  .schedule-section .schedule__image {
     flex: unset !important;
     width: 100% !important;
     min-height: 180px !important;
     padding: var(--space-lg) var(--space-md) !important;
     box-sizing: border-box !important;
   }
+
   .schedule-section .schedule__content {
     padding-bottom: 0 !important;
     font-size: 1rem !important;
   }
+
   .schedule-section .schedule__title {
     font-size: 1.3rem !important;
     line-height: 1.2 !important;
   }
+
   .schedule-section .schedule__image {
     padding-top: 0 !important;
     min-height: 120px !important;
   }
+
   .schedule-section .schedule__image img {
     min-height: 120px !important;
     max-height: 220px !important;
   }
 }
+
 @media (max-width: 600px) {
-  .schedule-section .schedule__content, .schedule-section .schedule__image {
+
+  .schedule-section .schedule__content,
+  .schedule-section .schedule__image {
     padding: var(--space-sm) 4vw !important;
     min-height: 80px !important;
   }
+
   .schedule-section .schedule__title {
     font-size: 1.05rem !important;
   }
 }
-/* ==========================================================================
-   Premier Schools Exhibition - Landing Page Styles
-   Semantic CSS with BEM naming convention
-   WCAG 2.2 AA Compliant
-   ========================================================================== */
 
-/* ==========================================================================
-   CSS Custom Properties (Design Tokens)
-   ========================================================================== */
+/* CSS Custom Properties (Design Tokens) */
 :root {
   /* Colors */
   --color-primary: hsl(240, 60%, 25%);
@@ -137,9 +146,7 @@
   --container-padding: var(--space-lg);
 }
 
-/* ==========================================================================
-   Reset & Base Styles
-   ========================================================================== */
+/* Reset & Base Styles */
 *,
 *::before,
 *::after {
@@ -185,8 +192,6 @@ img {
 
 a {
   color: inherit;
-  /* ...existing code... */
-
 }
 
 button {
@@ -201,9 +206,7 @@ ol {
   list-style: none;
 }
 
-/* ==========================================================================
-   Accessibility
-   ========================================================================== */
+/* Accessibility */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -237,9 +240,7 @@ ol {
   outline-offset: 2px;
 }
 
-/* ==========================================================================
-   Utility Classes
-   ========================================================================== */
+/* Utility Classes */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -289,12 +290,10 @@ ol {
   font-size: 1.1rem;
   margin-right: 0.5rem;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
 }
 
-/* ==========================================================================
-   Header
-   ========================================================================== */
+/* Header */
 .header {
   position: fixed;
   top: 0;
@@ -327,20 +326,14 @@ ol {
   border-radius: var(--radius-md);
 }
 
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* Hero Section */
 .hero {
   position: relative;
-  /* Use 90vh height for assessment requirement */
   min-height: 90vh;
   background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
-  /* Reduce vertical padding so content fits within 90vh */
   padding-top: calc(60px + var(--space-xl));
-  /* padding: calc(64px + var(--space-2xl)) var(--container-padding) var(--space-2xl); */
   overflow: hidden;
 }
-
 
 .hero__container {
   max-width: var(--container-max);
@@ -358,13 +351,10 @@ ol {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
     gap: var(--space-xl);
-    /* padding: 0; */
   }
 }
 
 @media (min-width: 1024px) {
-
-  /* Left content, wider center for 3-column sliders, and a compact form column */
   .hero__container {
     grid-template-columns: 1fr 2fr 1fr;
     align-items: center;
@@ -374,9 +364,8 @@ ol {
 .hero__content {
   color: var(--color-white);
 }
-/* ==========================================================================
-   Pre-schedule Section (50/50 Flex Row)
-   ========================================================================== */
+
+/* Pre-schedule Section */
 .schedule {
   display: flex;
   flex-direction: row;
@@ -385,11 +374,13 @@ ol {
   max-height: unset;
   overflow: hidden;
 }
+
 .schedule__container {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
+
 .schedule__content {
   flex: 1 1 50%;
   padding: var(--space-3xl) var(--space-4xl) var(--space-3xl) var(--space-4xl);
@@ -401,6 +392,7 @@ ol {
   box-sizing: border-box;
   border-radius: 0;
 }
+
 .schedule__image {
   flex: 1 1 50%;
   display: flex;
@@ -410,46 +402,60 @@ ol {
   box-sizing: border-box;
   border-radius: 0;
 }
+
 .schedule__image img {
   max-width: 90%;
   max-height: 90%;
   object-fit: contain;
   display: block;
 }
+
 @media (max-width: 900px) {
-  .schedule, .schedule__container {
+
+  .schedule,
+  .schedule__container {
     flex-direction: column !important;
     min-height: unset !important;
   }
-  .schedule__content, .schedule__image {
+
+  .schedule__content,
+  .schedule__image {
     flex: unset !important;
     width: 100% !important;
     min-height: 220px !important;
     padding: var(--space-lg) var(--space-md) !important;
     box-sizing: border-box !important;
   }
+
   .schedule__content {
     padding-bottom: 0 !important;
     font-size: 1rem !important;
   }
+
   .schedule__title {
     font-size: 1.3rem !important;
     line-height: 1.2 !important;
   }
+
   .schedule__image {
     padding-top: 0 !important;
     min-height: 180px !important;
   }
+
   .schedule__image img {
     min-height: 180px !important;
     max-height: 220px !important;
   }
 }
+
 @media (max-width: 600px) {
-  .schedule__content, .schedule__image {
+
+  .schedule__content,
+  .schedule__image {
     padding: var(--space-sm) 4vw !important;
     min-height: 120px !important;
   }
+
   .schedule__title {
     font-size: 1.05rem !important;
   }
@@ -522,8 +528,6 @@ ol {
   opacity: 0.5;
 }
 
-/* Hero Slider - two vertical columns */
-
 .hero__slider {
   position: relative;
   width: 100%;
@@ -532,7 +536,6 @@ ol {
   margin: var(--space-lg) auto 0 auto;
   align-self: center;
 }
-
 
 @media (min-width: 640px) {
   .hero__slider {
@@ -546,7 +549,6 @@ ol {
     margin: 0 auto;
   }
 }
-
 
 .hero__slider-grid {
   display: flex;
@@ -572,7 +574,6 @@ ol {
   }
 }
 
-
 .hero__column {
   flex: 1 1 0;
   min-width: 0;
@@ -597,18 +598,13 @@ ol {
 
 @media (min-width: 1024px) {
   .hero__column {
-    /* width: 100px; */
     height: min(78vh, 780px);
   }
 }
 
-/* Center column variation if needed */
-
-
 .hero__track {
   display: flex;
   flex-direction: column;
-  /* tighter spacing for smaller slides */
   gap: var(--space-lg);
   animation-duration: 18s;
   animation-timing-function: linear;
@@ -645,11 +641,9 @@ ol {
 
 .hero__slide {
   min-height: 240px;
-  /* slightly taller slides for emphasis */
   width: 100%;
   overflow: hidden;
   border-radius: var(--radius-full);
-  /* consistent rounded corners */
   background: var(--color-gray-200);
   transition: opacity var(--transition-fast), box-shadow var(--transition-fast);
   box-shadow: var(--shadow-md);
@@ -669,7 +663,6 @@ ol {
   display: block;
 }
 
-/* Removed hover scale to keep layout stable per design */
 .hero__slide:hover img {
   transform: none;
 }
@@ -684,14 +677,12 @@ ol {
   z-index: 5;
 }
 
-/* Pause on reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .hero__track {
     animation: none !important;
   }
 }
 
-/* Allow pausing via inline style (scripts.js) */
 .hero__track.paused {
   animation-play-state: paused !important;
 }
@@ -728,7 +719,6 @@ ol {
     justify-content: flex-end;
   }
 }
-
 
 .enquiry-form {
   background: hsla(240, 40%, 30%, 0.6);
@@ -803,9 +793,7 @@ ol {
   gap: 0.5rem;
 }
 
-/* ==========================================================================
-   Stats Section
-   ========================================================================== */
+/* Stats Section */
 .stats {
   padding: var(--space-2xl) var(--container-padding);
   background: var(--color-white);
@@ -848,7 +836,6 @@ ol {
 .stats__value {
   display: block;
   font-family: var(--font-display);
-  /* larger, prominent number sizing */
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
   color: var(--color-primary-dark);
@@ -863,9 +850,7 @@ ol {
   opacity: 0.95;
 }
 
-/* ==========================================================================
-   Participating Schools Section
-   ========================================================================== */
+/* Participating Schools Section */
 .schools {
   padding: var(--space-3xl) 0;
   background: var(--color-white);
@@ -873,7 +858,6 @@ ol {
 }
 
 .schools__container {
-  /* max-width: var(--container-max); */
   margin: 0 auto;
 }
 
@@ -944,11 +928,9 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* keep layout stable; no hover animations */
   transition: none;
 }
 
-/* Remove scale and shadow on hover; JS still pauses the marquee on hover/focus */
 .schools__logo:hover {
   transform: none;
   box-shadow: none;
@@ -966,9 +948,7 @@ ol {
   }
 }
 
-/* ==========================================================================
-   Choose School Section
-   ========================================================================== */
+/* Choose School Section */
 .choose {
   padding: var(--space-3xl) var(--container-padding);
   background: var(--color-white);
@@ -992,7 +972,6 @@ ol {
   position: relative;
 }
 
-
 .choose__cards {
   display: flex;
   flex-direction: row;
@@ -1013,6 +992,7 @@ ol {
   .choose__cards {
     gap: var(--space-xl);
   }
+
   .choose__card {
     flex: 0 0 45vw;
     max-width: 45vw;
@@ -1027,6 +1007,7 @@ ol {
     overflow-x: unset;
     padding-bottom: 0;
   }
+
   .choose__card {
     flex: unset;
     max-width: unset;
@@ -1106,10 +1087,7 @@ ol {
   width: 30px;
 }
 
-/* ==========================================================================
-   Pre-schedule Section
-   ========================================================================== */
-
+/* Pre-schedule Section */
 .schedule {
   position: relative;
   width: 100%;
@@ -1131,7 +1109,6 @@ ol {
     padding: 0;
   }
 }
-
 
 .schedule__container {
   display: flex;
@@ -1155,7 +1132,6 @@ ol {
     gap: 0;
   }
 }
-
 
 .schedule__content {
   display: flex !important;
@@ -1196,7 +1172,6 @@ ol {
 
 .schedule__title {
   font-family: var(--font-display);
-  /* slightly smaller to ensure it fits inside 70vh */
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
   color: var(--color-primary);
@@ -1215,7 +1190,6 @@ ol {
 .schedule__cta {
   align-self: flex-start;
 }
-
 
 .schedule__image {
   position: relative !important;
@@ -1239,7 +1213,6 @@ ol {
   }
 }
 
-
 .schedule__image img {
   width: 100%;
   height: 100%;
@@ -1250,9 +1223,7 @@ ol {
   margin: 0;
 }
 
-/* ==========================================================================
-   Exhibition Highlights Section
-   ========================================================================== */
+/* Exhibition Highlights Section */
 .exhibition {
   position: relative;
   padding: var(--space-3xl) var(--container-padding) var(--space-4xl);
@@ -1292,7 +1263,6 @@ ol {
   align-items: stretch;
 }
 
-/* Responsive card sizing: 1 / 2 / 3 / 4 per row depending on breakpoint */
 .exhibition__card {
   flex: 0 0 calc(100% - var(--space-lg));
   padding: var(--space-xl);
@@ -1350,7 +1320,6 @@ ol {
 .exhibition__controls {
   position: relative;
   z-index: 20;
-  /* ensure controls are above decorative curve */
   display: flex;
   justify-content: center;
   gap: var(--space-md);
@@ -1360,7 +1329,6 @@ ol {
 .exhibition__btn {
   position: relative;
   z-index: 25;
-  /* ensure clickable above decorative elements */
   pointer-events: auto;
   width: 48px;
   height: 48px;
@@ -1385,16 +1353,13 @@ ol {
 .exhibition__curve {
   position: absolute;
   bottom: -10px;
-  /* slightly overlap next section for a seamless join */
   left: 0;
   right: 0;
   height: 140px;
   background: transparent;
   z-index: 5;
   pointer-events: none;
-  /* decorative only - allow clicks through */
   color: var(--color-primary);
-  /* SVG uses currentColor for fill */
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -1405,19 +1370,15 @@ ol {
   width: 100%;
   height: 100%;
   transform: none;
-  /* no vertical flip - SVG path is already inverted */
 }
 
-/* If you prefer an even smoother curve on very wide screens, increase height */
 @media (min-width: 1200px) {
   .exhibition__curve {
     height: 180px;
   }
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer */
 .footer {
   background: linear-gradient(180deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
   color: var(--color-white);
@@ -1541,10 +1502,7 @@ ol {
   color: black;
 }
 
-/* ==========================================================================
-   Responsive Adjustments
-   ========================================================================== */
-
+/* Responsive Adjustments */
 @media (max-width: 767px) {
   .hero__container {
     padding-top: var(--space-xl);
@@ -1573,38 +1531,5 @@ ol {
     transform: none;
     margin-top: var(--space-lg);
     justify-content: center;
-  }
-}
-
-/* High Contrast Mode Support */
-@media (prefers-contrast: high) {
-  :root {
-    --color-primary: hsl(240, 100%, 20%);
-    --color-secondary: hsl(42, 100%, 50%);
-  }
-
-  .btn--primary,
-  .btn--secondary {
-    border-width: 3px;
-  }
-}
-
-/* Print Styles */
-@media print {
-
-  .header,
-  .hero__slider-controls,
-  .choose__pagination,
-  .exhibition__controls {
-    display: none
-  }
-
-  .hero {
-    min-height: auto;
-    padding: var(--space-xl);
-  }
-
-  body {
-    color: var(--color-black);
   }
 }
