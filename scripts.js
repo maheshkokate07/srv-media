@@ -502,74 +502,11 @@
     startAutoPlay();
   }
 
+
   // ==========================================================================
-  // Enquiry Form
+  // Enquiry Form (View Only - No Validation)
   // ==========================================================================
-
-  function initEnquiryForm() {
-    var form = document.getElementById('enquiryForm');
-    if (!form) return;
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var parentName = document.getElementById('parentName').value.trim();
-      var phoneNumber = document.getElementById('phoneNumber').value.trim();
-      var grade = document.getElementById('grade').value;
-
-      // Basic validation
-      var errors = [];
-
-      if (!parentName) {
-        errors.push('Please enter your name');
-      }
-
-      if (!phoneNumber) {
-        errors.push('Please enter your phone number');
-      } else if (!/^[0-9]{10}$/.test(phoneNumber)) {
-        errors.push('Please enter a valid 10-digit phone number');
-      }
-
-      if (!grade) {
-        errors.push('Please select a grade');
-      }
-
-      if (errors.length > 0) {
-        alert(errors.join('\n'));
-        updateLiveRegion('Form has errors: ' + errors.join('. '));
-        return;
-      }
-
-      // Success - in real app, this would submit to server
-      alert('Thank you for your enquiry! We will contact you soon.');
-      updateLiveRegion('Form submitted successfully. We will contact you soon.');
-      form.reset();
-    });
-
-    // Real-time validation feedback
-    var inputs = form.querySelectorAll('.enquiry-form__input, .enquiry-form__select');
-    inputs.forEach(function (input) {
-      input.addEventListener('blur', function () {
-        validateField(this);
-      });
-    });
-
-    function validateField(field) {
-      var isValid = true;
-
-      if (field.required && !field.value.trim()) {
-        isValid = false;
-      }
-
-      if (field.pattern && field.value) {
-        var regex = new RegExp(field.pattern);
-        isValid = regex.test(field.value);
-      }
-
-      field.setAttribute('aria-invalid', isValid ? 'false' : 'true');
-      field.style.borderColor = isValid ? '' : 'hsl(0, 70%, 50%)';
-    }
-  }
+  // No JS required for form as per assessment focus on view only.
 
   // ==========================================================================
   // Smooth Scroll for Anchor Links
